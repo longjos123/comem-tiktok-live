@@ -16,7 +16,7 @@ class TikTokCommentController extends Controller
     {
         $username = $request->input('username');
 
-        $process = new Process(['node', base_path('node-scripts/index.js'), $username]);
+        $process = new Process(['node', base_path('node-script/index.js'), $username]);
         $process->start();
 
         return response()->json(['status' => 'Script is running']);
